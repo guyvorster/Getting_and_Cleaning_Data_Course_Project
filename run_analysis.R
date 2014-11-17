@@ -22,10 +22,15 @@ run_analysis <- function()
         #can be ignored
         options(warn=-1)
         
+        
+        #------------------------------------------        
+        #STEP 1: COMBINE INPUT FILES
+        #------------------------------------------
+        
         #get the names of the attributes from the file called features.txt
         #file contains 2 columns with column 2 havingt the names
         features <- read.table ("./data/features.txt", header=FALSE)
-     
+        
         #use the make names function to ensure we have unique column names because 
         #there are some repeats
         #thanks to an anonymous posting (https://class.coursera.org/getdata-009/forum/thread?thread_id=58#comment-394),
@@ -40,7 +45,6 @@ run_analysis <- function()
         #the column names
         unique_features <- append (unique_features, c("subjectid", "activityid"), after=561)
         
-
         #read test data
         testdata <- read.table ("./data/test/x_test.txt", header=FALSE)
         # print (nrow(data))
@@ -104,6 +108,11 @@ run_analysis <- function()
         combinedset[combinedset$activityid==6,563] <- "Laying"
    
        
+       #------------------------------------------------------------------
+       #STEP 2: NARROW THE FOCUS TO AVERAGE AND STD DEVIATION COLUMNS ONLY
+       #------------------------------------------------------------------
+       
+       
         #use the gdata package's matchcols function to filter the list
         #of column names of the combined data-set and only return those column names who have 
         #meanx, y or z in the name (ending with x, y or z) or have "std' in the column name
@@ -118,6 +127,11 @@ run_analysis <- function()
         #create the filtered data-set that only focuses on the mean and std columns
         #along with the subjectid and activityid
         filtereddataset <- combinedset[, filtercolumnlist]
+       
+       
+       #------------------------------
+       #STEP 3:  AGGREGATE THE RESULTS
+       #------------------------------
        
        #create the final sumamrized dataset using the aggregate function
        #and grouping by subjectid and activtyid to calculate the average by subject by activity
@@ -134,12 +148,16 @@ run_analysis <- function()
        colnames(summaryset)[2] <- "activityid"
        
        
+       #-----------------------------------------
+       #STEP 4: EXPORT THE SUMMARIZED INFORMATION
+       #-----------------------------------------
+       
        #now write out the final summarized dataset using the pipe symbol {|} as the delimiter
        #the file is written to the users working directory
        write.table(summaryset,file=paste(getwd(),"summarized_average_sensor_results.txt", sep="/"), na = 'NA', sep = '|',
                    row.names = FALSE, col.names = TRUE)
        
     
-        print("Summarized table created")
+       print("Summarized table created")
     
 }
