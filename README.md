@@ -11,12 +11,11 @@ The following steps were performed in an R function called **run_analysis.R** to
 1. Combine Input Files (Pre-Processing Step #1):
 
 	* The two input data-sets provided consisted of "test" data and "train" data.  
-	* Each category (test and train) contained header-less data files from smartphone sensors, the activity performed and the subject performing the activity.
-	* The data-sets were imported va read.table statements and combined to create an inclusive data-set of sensor data, user data and activity data.
-	* The combined data-set consisted of 561 unnamed sensor reading features and 10,299 observations.,
-	* The combined data-set also contained a feature for the activity performed per observation as well as the subject performing the activity for a total of 563 features.
-	* The feature names for the sonsor readings (561) were provided in a separate file.  This file was loaded using read.table.  Because there were some duplicate names in the file, the make.names function was used to ensure unique feature names. The feature names were also cleaned up somewhat to lowercase the names and remove periods & brackets.  These clean feature names were then used as the names for the combined data-set's features.
-	* The activity values were changed from numeric (1 through 6) to textual strings for easier reading.  This wwas done using subsetting.
+	* Each category (test and train) contained three header-less data files with smartphone sensor output, the activity performed and the subject performing the activity.
+	* The three data-sets per category were imported via separateread.table statements and combined to create an inclusive data-set of sensor data, user data and activity data.
+	* The combined data-set consisted of 563 unnamed features and 10,299 observations.,
+	* The feature names for the sensor readings were provided in a separate file.  This file was loaded using read.table.  Because there were some duplicate names in the file, the make.names function was used to ensure unique feature names. The feature names were also cleaned up somewhat to lowercase the names and remove periods & brackets.  These clean feature names were then used as the names for the combined data-set's features.
+	* The activity values were changed from numeric (1 through 6) to textual strings for easier reading.  This wwas done using subsetting.  For example, changing the activity value of 1 to "Walking" was done via the follwoing command in R: dataset[dataset$activityid==1,563] <- "Walking".  The activity value was stored in column 563. 
 
 2. Narrow the Focus to Average & Standard Deviation Columns (Pre-Processing Step #2):
 
