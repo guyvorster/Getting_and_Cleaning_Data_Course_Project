@@ -36,7 +36,7 @@ The following steps were performed in an R function called **run_analysis.R** to
 
 4. Export the Results
 
-	* The summarized result (59 features across 180 observations) was produced in the file called "summarized_average_sensor_results.txt".
+	* The summarized result (59 features across 180 observations) was produced in the file called **"summarized_average_sensor_results.txt"**.
 	* The file contains column headers and each observation is delimited by a pipe symbol ( | ).
 	* Assuming this file has been downloaded to your working directory in R, you can load the file via the following command: x <- read.table ("summarized_sensor_results.txt", header=TRUE, sep="|")
 
