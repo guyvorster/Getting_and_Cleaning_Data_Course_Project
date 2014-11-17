@@ -29,9 +29,17 @@ The following steps were performed to calculate the average per feature per pers
 
 3. Aggregate the Results 
  
-	* Multiple observations existed for each subject and activity.  The goal was to create a single observation per subject per activity that showed the average per variable.
+	* Multiple observations existed for each subject and activity.  The goal was to create a single observation per subject per activity that showed the average per feature.
 	* This task was accomplished with the aggregate.data.frame command.  This command takes the name of the dataframe, the subjectid as one list input, the activityid as the other list input and the "mean" as the function to execute
-	* The final result would be a matrix of 59 variables across 180 observations.
+	* The final result is a matrix of 59 features across 180 observations.
+
+
+4. Results Output
+
+	* The summarized result (59 features across 180 observations) was produced in the file called "summarized_average_sensor_results.txt".
+	* The file contains column headers and each observation is delimited by a pipe symbol ( | ).
+	* Assuming this file has been downloaded to your working directory in R, you can load the file via the following command: x <- read.table ("summarized_sensor_results.txt", header=TRUE, sep="|")
+
 
 
 
