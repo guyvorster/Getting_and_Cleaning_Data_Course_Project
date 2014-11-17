@@ -4,7 +4,7 @@ Getting and Cleaning Data Course Project
 Calculating Averages From Sensor Data
 -------------------------------------
 
-The goal of this effort is to produce a single output file from a series of different input files containing smartphone sensor data. The sensor data was gathered from 30 subjects as they were performing one of six different activities.  The output file calculates the average per variable (feature) per person for the actvities that were measured.
+The goal of this project is to produce a single summarized output file from a series of different input files containing smartphone sensor data. The sensor data was gathered from 30 subjects as they were performing one of six different activities.  The output file (called **summarized_average_sensor_results.txt**) calculates the average per variable (feature) per person for one of six actvities that were measured.
 
 The following steps were performed in an R function called **run_analysis.R** to calculate the average per feature per person per activity:
 
@@ -36,7 +36,7 @@ The following steps were performed in an R function called **run_analysis.R** to
 
 4. Export the Results
 
-	* The summarized result (59 features across 180 observations) was produced in the file called **"summarized_average_sensor_results.txt"**.
+	* The summarized result (59 features across 180 observations) was produced in the file called **summarized_average_sensor_results.txt**.
 	* The file contains column headers and each observation is delimited by a pipe symbol ( | ).
 	* Assuming this file has been downloaded to your working directory in R, you can load the file via the following command: x <- read.table ("summarized_sensor_results.txt", header=TRUE, sep="|")
 
