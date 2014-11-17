@@ -12,8 +12,21 @@ His FAQ can be [found here] (https://class.coursera.org/getdata-009/forum/thread
 Input Data Files
 ----------------
 
-xxxxx
-
+The data can be found at this location: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+Once downloaded and unzipped, the following files were used as part of this project:
+test folder:
+	* x_test.txt
+	* y_test.txt
+	* subject_test.txt
+	
+train folder:
+	* x_train.txt
+	* y_train.txt
+	* subject_train.txt	
+	
+root folder:
+	* features.txt
+	* activity_labels.txt
 
 
 Feature Names
