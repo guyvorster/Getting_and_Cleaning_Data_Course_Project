@@ -10,10 +10,13 @@ The following steps were performed to calculate the average per variable:
 
 
 1. prepare data
+
 * ksdkddsk
 * dsdsds
 
 2. xxxx
+
+* aaa
 
 
 3. yyy 
