@@ -102,14 +102,7 @@ run_analysis <- function()
         combinedset[combinedset$activityid==4,563] <- "Sitting"
         combinedset[combinedset$activityid==5,563] <- "Standing"
         combinedset[combinedset$activityid==6,563] <- "Laying"
-     
-        
-    #   xx = combinedset[,c(1:5,562,563)]
-       
-     #  xx <- filter(xx, activityid == "Walking" & subjectid==1)
-       
-     #  mean(xx[,1])
-       
+   
        
         #use the gdata package's matchcols function to filter the list
         #of column names of the combined data-set and only return those column names who have 
@@ -146,10 +139,7 @@ run_analysis <- function()
        write.table(summaryset,file=paste(getwd(),"summarized_average_sensor_results.txt", sep="/"), na = 'NA', sep = '|',
                    row.names = FALSE, col.names = TRUE)
        
-     
-       #code to read the table in
-    #   xx <- read.table ("summarized_sensor_results.txt", header=TRUE, sep="|")
-       
-    print("Summarized table created")
+    
+        print("Summarized table created")
     
 }
