@@ -16,14 +16,14 @@ The data can be found at [this location] (https://d396qusza40orc.cloudfront.net/
 Once downloaded and unzipped, the following files were used as part of this project:
 
 test folder:
-	* x_test.txt
-	* y_test.txt
-	* subject_test.txt
+* x_test.txt
+* y_test.txt
+* subject_test.txt
 	
 train folder:
-	* x_train.txt
-	* y_train.txt
-	* subject_train.txt	
+* x_train.txt
+* y_train.txt
+* subject_train.txt	
 	
 root folder:
 	* features.txt
