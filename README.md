@@ -9,4 +9,14 @@ The goal of this effort is to produce a single output file from a series of inpu
 The following steps were performed to calculate the average per variable:
 
 
+1. prepare data
+* ksdkddsk
+* dsdsds
+
+2. xxxx
+
+
+3. yyy 
+
+
 
