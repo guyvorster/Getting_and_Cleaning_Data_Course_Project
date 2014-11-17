@@ -18,9 +18,15 @@ The following steps were performed to calculate the average per variable per per
 2. xxxx
 
 * aaa
+* ggg
 
 
 3. yyy 
+ 
+* ssss
+
+
+
 
 
 
