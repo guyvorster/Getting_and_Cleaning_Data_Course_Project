@@ -12,9 +12,10 @@ The following steps were performed to calculate the average per variable per per
 
 	* The two input data-sets provided consisted of "test" data and "train" data.  
 	* Each category (test and train) contained data files from smartphone sensors, the activity performed and the subject performing the activity.
-	* The data-sets were combined to create an inclusive data-set of sensor data, user data and activity data.
+	* The data-sets were imported va read.table statements and combined to create an inclusive data-set of sensor data, user data and activity data.
 	* The combined data-set consisted of 561 sensor reading variables over xxx observations.
 	* The combined data-set also contained a variable for the activity performed per observation as well as the subject performing the activity.
+	* The variable names (561) were contained in a separate file.  This file was read in using read.table.  Because there were some duplicate names in the file, the make.names function was used to ensure unique names.  These feature names were then used as the names for te combined data-set's features.
 
 2. Narrow the Focus to Average & Standard Deviation Columns (Pre-Processing Step #2):
 
