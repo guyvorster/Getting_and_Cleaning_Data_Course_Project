@@ -11,7 +11,7 @@ The following steps were performed to calculate the average per variable per per
 
 1. Prepare Input Files (Pre-Processing Step)
 
-* The two input data-sets provided consisted of "test" data and "train" data.  
+	* The two input data-sets provided consisted of "test" data and "train" data.  
 * Within each category (test and train), there are data from smartphone sensors, data from the activity performed and data related to the subject performing the action
 * The data-sets were combined to create an inclusive data-set of sensor data, user data and activity data
 
