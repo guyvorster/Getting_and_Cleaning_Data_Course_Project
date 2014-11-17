@@ -26,8 +26,8 @@ train folder:
 * subject_train.txt	
 	
 root folder:
-	* features.txt
-	* activity_labels.txt
+* features.txt
+* activity_labels.txt
 
 
 Feature Names
