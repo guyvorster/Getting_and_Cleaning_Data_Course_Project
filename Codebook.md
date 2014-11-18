@@ -16,18 +16,18 @@ The data can be found at [this location] (https://d396qusza40orc.cloudfront.net/
 Once downloaded and unzipped, the following files were used as part of this project:
 
 test folder:
-* x_test.txt (test data-set)
-* y_test.txt (activity labels)
-* subject_test.txt (test subjects)
+* x_test.txt (test data-set with 561 features that represents the smartphone sensor output)
+* y_test.txt (activity labels data-set with 1 feature representing the type of activity 1-6)
+* subject_test.txt (test subjects data-set with 1 feature representing the person performing the activity)
 	
 train folder:
-* x_train.txt (train data-set)
-* y_train.txt (activity labels)
-* subject_train.txt (train subjects)
+* x_train.txt (train data-set with 561 features that represents the smartphone sensor output)
+* y_train.txt (activity labels data-set with 1 feature representing the type of activity 1-6)
+* subject_train.txt (train subjects data-set with 1 feature representing the person performing the activity)
 	
 root folder:
-* features.txt
-* activity_labels.txt
+* features.txt (this file contains 561 observations which are the names of the features in the test and train data-sets)
+* activity_labels.txt (lookup of activity labels to names: 1=walking, 2=walking upstairs, 3=walking downstairs, 4=sitting, 5=stading, 6=laying)
 
 
 Feature Names
