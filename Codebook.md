@@ -92,8 +92,8 @@ While there were 563 features in total (after combining the various input files)
 * fbodybodyaccjerkmagstd
 * fbodybodygyromagstd
 * fbodybodygyrojerkmagstd
-* subjectid
-* activityid
+* subjectid			(1-30)
+* activityid			(Waking, Walking Upstairs, Walking Downstairs, Standing, Laying, Sitting) 
 
 
 
