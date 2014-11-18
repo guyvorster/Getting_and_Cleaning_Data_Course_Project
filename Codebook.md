@@ -33,47 +33,47 @@ root folder:
 Feature Names
 -------------
 
-While there were 563 features in total (after combining the various input files), the focus of this project was on 59 features. Part of the instructions for the project stated that we should "extract only the measurements on the mean and standard deviation for each measurement".  Because of this, the focus was only on those feature names that contained the word "mean" or "std".  There were a set of feature names with the word "meanfreq" in the name.  For the purposes of this exercise, it was decided to omit the features with "meanfreq" in the name and so the following 59 features  were included in the final analysis:  
+While there were 563 features in total (after combining the various input files), the focus of this project was on the 59 features which were capturing information about x, y and z axis movements of the smartphones. Part of the instructions for the project stated that we should "extract only the measurements on the mean and standard deviation for each measurement".  Because of this, the focus was only on those feature names that contained the word "mean" or "std".  There were a set of feature names with the word "meanfreq" in the name.  For the purposes of this exercise, it was decided to omit the features with "meanfreq" in the name and so the following 59 features  were included in the final analysis:  
 
-* tbodyaccmeanx
-* tbodyaccmeany
-* tbodyaccmeanz
-* tgravityaccmeanx
-* tgravityaccmeany
-* tgravityaccmeanz
-* tbodyaccjerkmeanx
-* tbodyaccjerkmeany
-* tbodyaccjerkmeanz
-* tbodygyromeanx
-* tbodygyromeany
-* tbodygyromeanz
-* tbodygyrojerkmeanx
-* tbodygyrojerkmeany
-* tbodygyrojerkmeanz
-* fbodyaccmeanx
-* fbodyaccmeany
-* fbodyaccmeanz
-* fbodyaccjerkmeanx
-* fbodyaccjerkmeany
-* fbodyaccjerkmeanz
-* fbodygyromeanx
-* fbodygyromeany
-* fbodygyromeanz
-* tbodyaccstdx
-* tbodyaccstdy
-* tbodyaccstdz
-* tgravityaccstdx
-* tgravityaccstdy
-* tgravityaccstdz
-* tbodyaccjerkstdx
-* tbodyaccjerkstdy
-* tbodyaccjerkstdz
-* tbodygyrostdx
-* tbodygyrostdy
-* tbodygyrostdz
-* tbodygyrojerkstdx
-* tbodygyrojerkstdy
-* tbodygyrojerkstdz
+* tbodyaccmeanx - (numeric indicating mean acceleration in x)
+* tbodyaccmeany - (numeric indicating mean acceleration in y)
+* tbodyaccmeanz - (numeric indicating mean acceleration in z)
+* tgravityaccmeanx - (numeric indicating mean gravity acceleration in x)
+* tgravityaccmeany - (numeric indicating mean gravity acceleration in y)
+* tgravityaccmeanz - (numeric indicating mean gravity acceleration in z)
+* tbodyaccjerkmeanx - (numeric indicating mean jerk acceleration in x)
+* tbodyaccjerkmeany - (numeric indicating mean jerk acceleration in y)
+* tbodyaccjerkmeanz - (numeric indicating mean jerk acceleration in z)
+* tbodygyromeanx - (numeric indicating mean gyroscope in x)
+* tbodygyromeany - (numeric indicating mean gyroscope in y)
+* tbodygyromeanz - (numeric indicating mean gyroscope in z)
+* tbodygyrojerkmeanx - (numeric indicating mean gyroscope jerk in x)
+* tbodygyrojerkmeany - (numeric indicating mean gyroscope jerk in y)
+* tbodygyrojerkmeanz - (numeric indicating mean gyroscope jerk in z)
+* fbodyaccmeanx - (numeric indicating mean body acceleration in x)
+* fbodyaccmeany - (numeric indicating mean body acceleration in y)
+* fbodyaccmeanz - (numeric indicating mean body acceleration in z)
+* fbodyaccjerkmeanx - (numeric indicating mean body acceleration jerk in x)
+* fbodyaccjerkmeany - (numeric indicating mean body acceleration jerk in y)
+* fbodyaccjerkmeanz - (numeric indicating mean body acceleration jerk in z)
+* fbodygyromeanx - (numeric indicating mean body gyroscope in x)
+* fbodygyromeany - (numeric indicating mean body gyroscope in y)
+* fbodygyromeanz - (numeric indicating mean body gyroscope in z)
+* tbodyaccstdx - (numeric indicating standard deviation body acceleration in x)
+* tbodyaccstdy - (numeric indicating standard deviation body acceleration in y)
+* tbodyaccstdz - (numeric indicating standard deviation body acceleration in z)
+* tgravityaccstdx - (numeric indicating standard deviation gravity acceleration in x)
+* tgravityaccstdy - (numeric indicating standard deviation gravity acceleration in y)
+* tgravityaccstdz - (numeric indicating standard deviation gravity acceleration in z)
+* tbodyaccjerkstdx - (numeric indicating standard deviation jerk acceleration in x)
+* tbodyaccjerkstdy - (numeric indicating standard deviation jerk acceleration in y)
+* tbodyaccjerkstdz - (numeric indicating standard deviation jerk acceleration in z)
+* tbodygyrostdx - (numeric indicating standard deviation gyroscope in x)
+* tbodygyrostdy - (numeric indicating standard deviation gyroscope in y)
+* tbodygyrostdz - (numeric indicating standard deviation gyroscope in z)
+* tbodygyrojerkstdx - (numeric indicating standard deviation gyroscope jerk in x)
+* tbodygyrojerkstdy - (numeric indicating standard deviation gyroscope jerk in y)
+* tbodygyrojerkstdz - (numeric indicating standard deviation gyroscope jerk in z)
 * tbodyaccmagstd
 * tgravityaccmagstd
 * tbodyaccjerkmagstd
@@ -92,8 +92,8 @@ While there were 563 features in total (after combining the various input files)
 * fbodybodyaccjerkmagstd
 * fbodybodygyromagstd
 * fbodybodygyrojerkmagstd
-* subjectid - (1-30)
-* activityid - (Walking, Walking Upstairs, Walking Downstairs, Standing, Laying, Sitting) 
+* subjectid - (numeric indicating the subject doing the activity: 1-30)
+* activityid - (character indicating the type of activity: Walking, Walking Upstairs, Walking Downstairs, Standing, Laying, Sitting) 
 
 
 
