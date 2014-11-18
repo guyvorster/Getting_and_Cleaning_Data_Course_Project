@@ -112,4 +112,7 @@ xxxxxxxxxx
 Output File
 -----------
 
+A single output file is created as the final deliverable of this project.  This file contains the summarized mean and standard deviation features (57 of them) summarized by subject (30 subjects) and by activity (6 activities).  The final output file contains 180 observations. 
 
+The file can be read into R with the following statement (assuming the file exists in your working directory):
+data <- 
