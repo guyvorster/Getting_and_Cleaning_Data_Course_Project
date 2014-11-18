@@ -122,7 +122,7 @@ The code in **run_analysis.R** can be broken into various blocks of functionalit
 * The filtered data-set also included the activity which listed one of six different activities that were monitored per observation and the subject performing the activity, resulting in 59 features in total.
 
 
-**Step 3: Aggregate the Results: **
+**Step 3: Aggregate the Results:**
  
 * Multiple observations existed for each subject and activity (hence 10,299 observations).  The goal was to create a single observation per subject (30 subjects) per activity (6 activities) that showed the average per feature (in other words, create a file with 180 observations).
 * This task was accomplished with the aggregate.data.frame command.  This command takes the name of the dataframe, the subjectid as one list input, the activityid as the other list input and the "mean" as the function to execute
