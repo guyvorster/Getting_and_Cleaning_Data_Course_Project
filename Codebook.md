@@ -33,7 +33,7 @@ root folder:
 Feature Names
 -------------
 
-While there were 563 features in total (after combining the files), the focus of this project was on 59 features. Part of the instructions for the project stated that we should "extract only the measurements on the mean and standard deviation for each measurement".  Because of this, the focus was only on those feature names that ended in mean or std.following logic was applied to narrow the larger data-set down to 59 features:
+While there were 563 features in total (after combining the files), the focus of this project was on 59 features. Part of the instructions for the project stated that we should "extract only the measurements on the mean and standard deviation for each measurement".  Because of this, the focus was only on those feature names that ended in mean or std. The following 59 features were included in the final output file:
 
 
 
