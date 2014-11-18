@@ -4,7 +4,7 @@ Getting and Cleaning Data Course Project - Codebook for run_analysis.R
 Background
 -----------
 
-This codebook contains information about the code, data and output of the run_analysis script.
+This codebook contains information about the data, code and output of the run_analysis script.
 Thanks to David Hood for providing some good advice and tips in his FAQ on how to approach the project.
 His FAQ can be [found here] (https://class.coursera.org/getdata-009/forum/thread?thread_id=58#post-177)
 
@@ -12,7 +12,7 @@ His FAQ can be [found here] (https://class.coursera.org/getdata-009/forum/thread
 Input Data Files
 ----------------
 
-The data can be found at [this location] (https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
+The original source data can be found at [this location] (https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
 Once downloaded and unzipped, the following files were used as part of this project:
 
 test folder:
@@ -33,7 +33,9 @@ root folder:
 Feature Names
 -------------
 
-xxxxx
+While there were 563 features in total (after combining the files), the focus of this project was on 59 features. Part of the instructions for the project stated that we should "extract only the measurements on the mean and standard deviation for each measurement".  Because of this, the focus was only on those feature names that ended in mean or std.following logic was applied to narrow the larger data-set down to 59 features:
+
+
 
 
 
@@ -44,5 +46,9 @@ Code Description
 
 
 xxxxxxxxxx
+
+
+Output File
+-----------
 
 
