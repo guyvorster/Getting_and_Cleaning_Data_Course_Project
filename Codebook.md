@@ -35,6 +35,8 @@ Feature Names
 
 While there were 563 features in total (after combining the various input files), the focus of this project was on the 59 features which were capturing information about x, y and z axis movements of the smartphones. Part of the instructions for the project stated that we should "extract only the measurements on the mean and standard deviation for each measurement".  Because of this, the focus was only on those feature names that contained the word "mean" or "std".  There were a set of feature names with the word "meanfreq" in the name.  For the purposes of this exercise, it was decided to omit the features with "meanfreq" in the name and so the following 59 features  were included in the final analysis:  
 
+* subjectid - (numeric indicating the subject doing the activity: 1-30)
+* activityid - (character indicating the type of activity: Walking, Walking Upstairs, Walking Downstairs, Standing, Laying, Sitting) 
 * tbodyaccmeanx - (numeric indicating mean acceleration in x)
 * tbodyaccmeany - (numeric indicating mean acceleration in y)
 * tbodyaccmeanz - (numeric indicating mean acceleration in z)
@@ -74,26 +76,24 @@ While there were 563 features in total (after combining the various input files)
 * tbodygyrojerkstdx - (numeric indicating standard deviation gyroscope jerk in x)
 * tbodygyrojerkstdy - (numeric indicating standard deviation gyroscope jerk in y)
 * tbodygyrojerkstdz - (numeric indicating standard deviation gyroscope jerk in z)
-* tbodyaccmagstd
-* tgravityaccmagstd
-* tbodyaccjerkmagstd
-* tbodygyromagstd
-* tbodygyrojerkmagstd
-* fbodyaccstdx
-* fbodyaccstdy
-* fbodyaccstdz
-* fbodyaccjerkstdx
-* fbodyaccjerkstdy
-* fbodyaccjerkstdz
-* fbodygyrostdx
-* fbodygyrostdy
-* fbodygyrostdz
-* fbodyaccmagstd
-* fbodybodyaccjerkmagstd
-* fbodybodygyromagstd
-* fbodybodygyrojerkmagstd
-* subjectid - (numeric indicating the subject doing the activity: 1-30)
-* activityid - (character indicating the type of activity: Walking, Walking Upstairs, Walking Downstairs, Standing, Laying, Sitting) 
+* tbodyaccmagstd - (numeric indicating standard deviation accmag in x)
+* tgravityaccmagstd - (numeric indicating standard deviation accmag in y)
+* tbodyaccjerkmagstd - (numeric indicating standard deviation jerkmag in z)
+* tbodygyromagstd - (numeric indicating standard deviation gyromag in x)
+* tbodygyrojerkmagstd - (numeric indicating standard deviation gyromag in x)
+* fbodyaccstdx - (numeric indicating standard deviation of body acceleration in x)
+* fbodyaccstdy - (numeric indicating standard deviation of body acceleration in y)
+* fbodyaccstdz - (numeric indicating standard deviation of body acceleration in z)
+* fbodyaccjerkstdx - (numeric indicating standard deviation of acceleration jerk in x)
+* fbodyaccjerkstdy - (numeric indicating standard deviation of acceleration jerk in y)
+* fbodyaccjerkstdz - (numeric indicating standard deviation of acceleration jerk in z)
+* fbodygyrostdx - (numeric indicating standard deviation of body gyroscope in x)
+* fbodygyrostdy - (numeric indicating standard deviation of body gyroscope in y)
+* fbodygyrostdz - (numeric indicating standard deviation of body gyroscope in z)
+* fbodyaccmagstd - (numeric indicating standard deviation of accmag in x)
+* fbodybodyaccjerkmagstd - (numeric indicating standard deviation of body acceleration jerk mag in x)
+* fbodybodygyromagstd - (numeric indicating standard deviation of body acceleration jerk mag in y)
+* fbodybodygyrojerkmagstd - (numeric indicating standard deviation of body acceleration jerk mag in z)
 
 
 
