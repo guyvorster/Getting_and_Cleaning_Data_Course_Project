@@ -97,18 +97,10 @@ While there were 563 features in total (after combining the various input files)
 * fbodybodygyrojerkmagstd - (numeric indicating standard deviation of body acceleration jerk mag in z)
 
 
-
-
-
-
-
-
 Code Description
 ----------------
 
-The code can be broken into various blocks of functionality as described below:
-
-The following steps were performed in the R function called **run_analysis.R** to calculate the average per feature per person per activity:
+The code in **run_analysis.R** can be broken into various blocks of functionality as described below:
 
 1. Combine Input Files:
 
