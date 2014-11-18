@@ -33,7 +33,68 @@ root folder:
 Feature Names
 -------------
 
-While there were 563 features in total (after combining the files), the focus of this project was on 59 features. Part of the instructions for the project stated that we should "extract only the measurements on the mean and standard deviation for each measurement".  Because of this, the focus was only on those feature names that ended in mean or std. The following 59 features were included in the final output file:
+While there were 563 features in total (after combining the various input files), the focus of this project was on 59 features. Part of the instructions for the project stated that we should "extract only the measurements on the mean and standard deviation for each measurement".  Because of this, the focus was only on those feature names that contained the word "mean" or "std".  There were a set of feature names with the word "meanfreq" in the name.  For the purposes of this exercise, it was decided to omit the features with "meanfreq" in the name and so the following 59 features  were included in the final analysis:  
+
+* tbodyaccmeanx
+* tbodyaccmeany
+* tbodyaccmeanz
+* tgravityaccmeanx
+* tgravityaccmeany
+* tgravityaccmeanz
+* tbodyaccjerkmeanx
+* tbodyaccjerkmeany
+* tbodyaccjerkmeanz
+* tbodygyromeanx
+* tbodygyromeany
+* tbodygyromeanz
+* tbodygyrojerkmeanx
+* tbodygyrojerkmeany
+* tbodygyrojerkmeanz
+* fbodyaccmeanx
+* fbodyaccmeany
+* fbodyaccmeanz
+* fbodyaccjerkmeanx
+* fbodyaccjerkmeany
+* fbodyaccjerkmeanz
+* fbodygyromeanx
+* fbodygyromeany
+* fbodygyromeanz
+* tbodyaccstdx
+* tbodyaccstdy
+* tbodyaccstdz
+* tgravityaccstdx
+* tgravityaccstdy
+* tgravityaccstdz
+* tbodyaccjerkstdx
+* tbodyaccjerkstdy
+* tbodyaccjerkstdz
+* tbodygyrostdx
+* tbodygyrostdy
+* tbodygyrostdz
+* tbodygyrojerkstdx
+* tbodygyrojerkstdy
+* tbodygyrojerkstdz
+* tbodyaccmagstd
+* tgravityaccmagstd
+* tbodyaccjerkmagstd
+* tbodygyromagstd
+* tbodygyrojerkmagstd
+* fbodyaccstdx
+* fbodyaccstdy
+* fbodyaccstdz
+* fbodyaccjerkstdx
+* fbodyaccjerkstdy
+* fbodyaccjerkstdz
+* fbodygyrostdx
+* fbodygyrostdy
+* fbodygyrostdz
+* fbodyaccmagstd
+* fbodybodyaccjerkmagstd
+* fbodybodygyromagstd
+* fbodybodygyrojerkmagstd
+* subjectid
+* activityid
+
 
 
 
