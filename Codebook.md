@@ -33,7 +33,7 @@ root folder:
 Feature Names
 -------------
 
-While there were 563 features in total (after combining the various input files), the focus of this project was on the 59 features which were capturing information about x, y and z axis movements of the smartphones. Part of the instructions for the project stated that we should "extract only the measurements on the mean and standard deviation for each measurement".  Because of this, the focus was only on those feature names that contained the word "mean" or "std".  There were a set of feature names with the word "meanfreq" in the name.  For the purposes of this exercise, it was decided to omit the features with "meanfreq" in the name and so the following 59 features  were included in the final analysis:  
+While there were 563 features in total (after combining the various input files), the focus of this project was on the 59 features which were capturing mean and standard deviation information about x, y and z axis movements of the smartphones. Part of the instructions for the project stated that we should "extract only the measurements on the mean and standard deviation for each measurement".  Because of this, the focus was only on those feature names that contained the word "mean" or "std".  There were a set of feature names with the word "meanfreq" in the name.  For the purposes of this exercise, it was decided to omit the features with "meanfreq" in the name and so the following 59 features  were included in the final analysis:  
 
 * subjectid - (numeric indicating the subject doing the activity: 1-30)
 * activityid - (character indicating the type of activity: Walking, Walking Upstairs, Walking Downstairs, Standing, Laying, Sitting) 
