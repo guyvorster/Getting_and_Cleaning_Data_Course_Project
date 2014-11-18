@@ -4,8 +4,9 @@ Getting and Cleaning Data Course Project - Codebook for run_analysis.R
 Background
 -----------
 
-This codebook contains information about the data, code and output of the run_analysis script.
-Thanks to David Hood for providing some good advice and tips in his FAQ on how to approach the project.
+This codebook contains information about the data, code and output of the run_analysis script. The overall purpose of this script is to create a summarized single data-set from various input files that captured smart-phone sensor data from various subjects performing certain actions.
+
+Thanks to David Hood for providing some good advice and tips in his FAQ on how to approach this particular project.
 His FAQ can be [found here] (https://class.coursera.org/getdata-009/forum/thread?thread_id=58#post-177)
 
 
