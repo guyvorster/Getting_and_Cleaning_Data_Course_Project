@@ -135,6 +135,7 @@ The code in **run_analysis.R** can be broken into various blocks of functionalit
 * The file contains column headers and each observation is delimited by a pipe symbol ( | ).
 * Assuming this file has been downloaded to your working directory in R, you can load the file via the following command: data <- read.table ("summarized_sensor_results.txt", header=TRUE, sep="|")
 
+NOTE:  Should you wish to execute the run_analysis.R script, the data files are assumed to have been unzipped in a folder called "data" with sub-folders called "test" and "train" containing the test and train data-sets.
 
 Output File
 -----------
