@@ -155,7 +155,7 @@ run_analysis <- function()
        #now write out the final summarized dataset using the pipe symbol {|} as the delimiter
        #the file is written to the users working directory
        write.table(summaryset,file=paste(getwd(),"summarized_average_sensor_results.txt", sep="/"), na = 'NA', sep = '|',
-                   row.names = FALSE, col.names = TRUE)
+                   row.names = FALSE, col.names = TRUE, quote=FALSE)
        
     
        print("Summarized table created")
