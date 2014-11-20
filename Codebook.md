@@ -26,7 +26,7 @@ train folder:
 * y_train.txt (activity labels data-set with 1 feature representing the type of activity 1-6)
 * subject_train.txt (train subjects data-set with 1 feature representing the person performing the activity)
 	
-root folder:
+root folder (data):
 * features.txt (this file contains 561 observations which are the names of the features in the test and train data-sets)
 * activity_labels.txt (lookup of activity labels to names: 1=walking, 2=walking upstairs, 3=walking downstairs, 4=sitting, 5=stading, 6=laying)
 
