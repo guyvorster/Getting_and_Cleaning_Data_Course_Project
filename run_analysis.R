@@ -18,6 +18,16 @@ run_analysis <- function()
                 require(gdata)
         }
         
+        #load reshape package        
+        if (!require(reshape2)) 
+        {
+                install.packages("reshape2")
+                library(reshape2)
+                require(reshape2)
+        }
+        
+        
+        
         #disable warning messages because we will get a few during the processing but they
         #can be ignored
         options(warn=-1)
@@ -148,14 +158,30 @@ run_analysis <- function()
        colnames(summaryset)[2] <- "activityid"
        
        
+       #Create a narrow data-set out of the wide summarized data-set using the reshape package.
+       #first we focus only on the columns which contain the data we want to use (all but subject and activity)
+       measurecols <- colnames(summaryset)[3:59]
+       #now we create the narrow dataset using melt        
+       narrowset <- melt(summaryset, id=c("subjectid", "activityid"), measure.vars=measurecols)
+       #rename the last column to be meanvalue just to make it clear what is contained in there
+       colnames(narrowset)[4] <- "meanvalue"
+       
+       
+       
        #-----------------------------------------
        #STEP 4: EXPORT THE SUMMARIZED INFORMATION
        #-----------------------------------------
        
        #now write out the final summarized dataset using the pipe symbol {|} as the delimiter
        #the file is written to the users working directory
-       write.table(summaryset,file=paste(getwd(),"summarized_average_sensor_results.txt", sep="/"), na = 'NA', sep = '|',
-                   row.names = FALSE, col.names = TRUE, quote=FALSE)
+       write.table(summaryset,file=paste(getwd(),"summarized_average_sensor_results_wide.txt", sep="/"), 
+                   na = 'NA', sep = '|', row.names = FALSE, col.names = TRUE, quote=FALSE)
+       
+       #write out the narrow version of the file too just in case the user
+       #of the function likes to work with narrow data instead of wide data
+       write.table(narrowset,file=paste(getwd(),"summarized_average_sensor_results_narrow.txt", sep="/"), 
+                   na = 'NA', sep = '|', row.names = FALSE, col.names = TRUE, quote=FALSE)
+       
        
     
        print("Summarized table created")
