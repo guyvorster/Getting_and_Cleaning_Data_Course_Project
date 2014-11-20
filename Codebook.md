@@ -156,6 +156,7 @@ Two output files **(summarized_sensor_results_wide.txt and summarized_sensor_res
 
 
 
-The file can be read into R with the following statement (assuming the file exists in your working directory):
-data <- read.table ("summarized_sensor_results.txt", header=TRUE, sep="|")
+The files can be read into R with the following statement (assuming the file exists in your working directory):
+* widedata <- read.table ("summarized_sensor_results_wide.txt", header=TRUE, sep="|")
+* narrowdata <- read.table ("summarized_sensor_results_narrow.txt", header=TRUE, sep="|")
 
