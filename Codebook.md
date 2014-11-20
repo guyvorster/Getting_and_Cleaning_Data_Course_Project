@@ -14,21 +14,21 @@ Study Design
 ------------
 
 The original source data can be found at [this location] (https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
-Once downloaded and unzipped, the following files were used as part of this project:
+Once downloaded and unzipped into a "data folder", the following files were used as part of this project:
 
-test folder:
+test folder (under data folder):
 * x_test.txt (test data-set with 561 features that represents the smartphone sensor output)
 * y_test.txt (activity labels data-set with 1 feature representing the type of activity 1-6)
 * subject_test.txt (test subjects data-set with 1 feature representing the person performing the activity)
 	
-train folder:
+train folder (under data folder):
 * x_train.txt (train data-set with 561 features that represents the smartphone sensor output)
 * y_train.txt (activity labels data-set with 1 feature representing the type of activity 1-6)
 * subject_train.txt (train subjects data-set with 1 feature representing the person performing the activity)
 	
 root folder (data):
 * features.txt (this file contains 561 observations which are the names of the features in the test and train data-sets)
-* activity_labels.txt (lookup of activity labels to names: 1=walking, 2=walking upstairs, 3=walking downstairs, 4=sitting, 5=stading, 6=laying)
+* activity_labels.txt (lookup of activity labels to names: 1=walking, 2=walking upstairs, 3=walking downstairs, 4=sitting, 5=standing, 6=laying)
 
 
 Code Book
