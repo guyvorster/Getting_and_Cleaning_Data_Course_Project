@@ -102,6 +102,13 @@ Instruction List
 
 The code in **run_analysis.R** can be broken into various blocks of functionality as described below. Note this code assumes you have the data in your R working folder:
 
+**Preparation**
+This up front step loads all the required packages for the function.  The following packages are used in this function:
+* data.table
+* gdata
+* reshape2
+
+
 **Step 1: Combine Input Files:**
 
 * The two input data-sets provided consisted of "test" data and "train" data.  
@@ -124,23 +131,30 @@ The code in **run_analysis.R** can be broken into various blocks of functionalit
 
 **Step 3: Aggregate the Results:**
  
-* Multiple observations existed for each subject and activity (hence 10,299 observations).  The goal was to create a single observation per subject (30 subjects) per activity (6 activities) that showed the **average** per feature (in other words, create a file with 180 observations).
-* This task was accomplished with the aggregate.data.frame command.  This command takes the name of the dataframe, the subjectid as one list input, the activityid as the other list input and the "mean" as the function to execute
-* The final result is a matrix of 180 observations across 59 features, with each cell of data (except for subject and activity) being the average value summarized from multiple observations.
+* Multiple observations existed for each subject and activity (hence a total of 10,299 observations).  The goal was to create a single observation per subject (30 subjects) per activity (6 activities) that showed the **average** per feature.  This could be accomplished by creating a file with 180 observations and 59 features (i.e. a wide file) OR a file with 10,260 observations and 4 features (i.e. a narrow file).
+* The initial summarization task was accomplished with the aggregate.data.frame command.  This command takes the name of the dataframe, the subjectid as one list input, the activityid as the other list input and the "mean" as the function to execute
+* The final result is a matrix of 180 observations across 59 features, with each cell of data (except for subject and activity) being the average value summarized from multiple observations.  This produced the wide data-set.  The narrow data-set was produced by taking the summarized data-set and using the **melt** function from the reshape package to convert all the features (excpet subject an activity) and their corresponding values into column/value pairs.  This resulted in a narrowset object with 4 features and 10,260 rows.
 
 
 **Step 4: Export the Results:**
 
-* The summarized result (59 features across 180 observations) was produced in the file called **summarized_average_sensor_results.txt**.
-* The file contains column headers and each observation is delimited by a pipe symbol ( | ).
-* Assuming this file has been downloaded to your working directory in R, you can load the file via the following command: data <- read.table ("summarized_sensor_results.txt", header=TRUE, sep="|")
+* The summarized result of the **wide** data-set (59 features across 180 observations) was produced in the file called **summarized_average_sensor_results_wide.txt**.
+* The summarized result of the **narrow** data-set (4 features across 10,260 observations) was produced in the file called **summarized_average_sensor_results_narrow.txt**.
+* Both files contains column headers and each observation is delimited by a pipe symbol ( | ).
+* Assuming these file has been downloaded to your working directory in R, you can load the wide file via the following command: widedata <- read.table ("summarized_sensor_results.txt_wide", header=TRUE, sep="|")
+* The narrow dataset can be loaded with this command:  narrowdata <- read.table ("summarized_sensor_results.txt_narrow", header=TRUE, sep="|")
 
 NOTE:  Should you wish to execute the run_analysis.R script, the data files are assumed to have been unzipped in a folder called "data" with sub-folders called "test" and "train" containing the test and train data-sets.
 
 Output File
 -----------
 
-A single output file called **summarized_sensor_results.txt** has been created as the final deliverable of this project.  This file contains the summarized mean and standard deviation features (57 of them) summarized by subject (30 subjects) and by activity (6 activities) for a total of 59 features (per the Feature Names section of this document).  The final output file contains 180 observations. The file contains column header names and each record is separated with the pipe symbol ( | ).
+Two output files **(summarized_sensor_results_wide.txt and summarized_sensor_results_narrow.txt)** were created as the final deliverable of this project depending on the users preference for wide or narrow data:
+* The wide file contains the mean values for the mean and standard deviation features (57 of them) summarized by subject (30 subjects) and by activity (6 activities) for a total of 59 features (per the Feature Names section of this document).  The final wide output file contains 180 observations. The file contains column header names and each record is separated with the pipe symbol ( | ).
+* The narrow file contains column value pairs of variable name and mean value per subject per activity. As a result, this fole contains only 4 features but 10,260 observations. The file contains column header names and each record is separated with the pipe symbol ( | ).
+
+
+
 
 The file can be read into R with the following statement (assuming the file exists in your working directory):
 data <- read.table ("summarized_sensor_results.txt", header=TRUE, sep="|")
