@@ -10,8 +10,8 @@ Thanks to David Hood for providing some good advice and tips in his FAQ on how t
 His FAQ can be [found here] (https://class.coursera.org/getdata-009/forum/thread?thread_id=58#post-177)
 
 
-Input Data Files
-----------------
+Study Design
+------------
 
 The original source data can be found at [this location] (https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
 Once downloaded and unzipped, the following files were used as part of this project:
@@ -31,8 +31,8 @@ root folder:
 * activity_labels.txt (lookup of activity labels to names: 1=walking, 2=walking upstairs, 3=walking downstairs, 4=sitting, 5=stading, 6=laying)
 
 
-Feature Names
--------------
+Code Book
+---------
 
 While there were 563 features in total (after combining the various input files), the focus of this project was on the 59 features which were capturing mean and standard deviation information about x, y and z axis movements of the smartphones. Part of the instructions for the project stated that we should "extract only the measurements on the mean and standard deviation for each measurement".  Because of this, the focus was only on those feature names that contained the word "mean" or "std".  There were a set of feature names with the word "meanfreq" in the name.  For the purposes of this exercise, it was decided to omit the features with "meanfreq" in the name and so the following 59 features  were included in the final analysis:  
 
@@ -97,15 +97,15 @@ While there were 563 features in total (after combining the various input files)
 * fbodybodygyrojerkmagstd - (numeric indicating standard deviation of body acceleration jerk mag in z)
 
 
-Code Description
+Instruction List
 ----------------
 
-The code in **run_analysis.R** can be broken into various blocks of functionality as described below:
+The code in **run_analysis.R** can be broken into various blocks of functionality as described below. Note this code assumes you have the data in your R working folder:
 
 **Step 1: Combine Input Files:**
 
 * The two input data-sets provided consisted of "test" data and "train" data.  
-* Each category (test and train) contained three header-less data files with smartphone sensor output (x_test, x_train), the activity performed (y_test, y_train) and the subject performing the activity (subject_test, subject_train).
+* Each category (test and train) contained three header-less data files with smartphone sensor output (x_test.txt, x_train.txt), the activity performed (y_test.txt, y_train.txt) and the subject performing the activity (subject_test.txt, subject_train.txt).
 * The three data-sets per category were imported via separate read.table statements and combined to create an inclusive data-set of sensor data, user data and activity data.
 * The combined data-set consisted of 563 unnamed features and 10,299 observations.
 * The feature names for the sensor readings were provided in a separate file (features.txt).  This file was loaded using read.table.  Because there were some duplicate names in the file, the make.names function was used to ensure unique feature names. The feature names were also cleaned up somewhat to lowercase the names and remove periods & brackets with the gsub command.  These clean feature names were then used as the names for the combined data-set's features using the colnames command.
