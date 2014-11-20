@@ -30,14 +30,16 @@ The following steps were performed in the R function called **run_analysis.R** t
  
 	* Multiple observations existed for each subject and activity (hence 10,299 observations).  The goal was to create a single observation per subject (30 subjects) per activity (6 activities) that showed the average per feature (in other words, create a file with 180 observations).
 	* This task was accomplished with the aggregate.data.frame command.  This command takes the name of the dataframe, the subjectid as one list input, the activityid as the other list input and the "mean" as the function to execute
-	* The final result is a matrix of 180 observations across 59 features.
+	* The final result is a matrix of 180 observations across 59 features (a wide data-set).
+	* A narrow data-set was also created by taking the wide one and executing the melt function on it to produce column/value pairs out of the 57 measurement columns.
 
 
 4. Export the Results:
 
-	* The summarized result (59 features across 180 observations) was produced in the file called **summarized_average_sensor_results.txt**.
+	* The summarized wide result (59 features across 180 observations) was produced in the file called **summarized_average_sensor_results_wide.txt**.
+	* The summarized narrow result (4 features across 10,260 observations) was produced in the file called **summarized_average_sensor_results_narrow.txt**.
 	* The file contains column headers and each observation is delimited by a pipe symbol ( | ).
-	* Assuming this file has been downloaded to your working directory in R, you can load the file via the following command: x <- read.table ("summarized_sensor_results.txt", header=TRUE, sep="|")
+	* Assuming the wide or narrow files have been downloaded to your working directory in R, you can load the files via the following commands: widedata <- read.table ("summarized_sensor_results_wide.txt", header=TRUE, sep="|") OR narrowdata <- read.table ("summarized_sensor_results_narrow.txt", header=TRUE, sep="|")
 
 NOTE:  Should you wish to execute the run_analysis.R script, the data files are assumed to have been unzipped in a folder called "data" with sub-folders called "test" and "train" containing the test and train data-sets.
 
